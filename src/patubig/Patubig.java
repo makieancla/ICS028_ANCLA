@@ -28,8 +28,7 @@ public class Patubig {
             }
         } catch (SQLException e) {
             System.out.println("Connection failed!");
-            e.printStackTrace(); 
-        // TODO code application logic here
+            // TODO code application logic here
     }
     
 }}
