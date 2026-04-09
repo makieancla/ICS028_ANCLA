@@ -242,15 +242,13 @@ public class Registration extends javax.swing.JFrame {
     }//GEN-LAST:event_txtlastNameActionPerformed
 
     private void RegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterActionPerformed
-           new Login().setVisible(true); 
-    this.dispose();
-    
+  
         String firstName, lastName, useremail, passwords;
         if ("".equals(txtfirstName.getText())) {
     JOptionPane.showMessageDialog(new JFrame(), "Required FirstName");
 }
             if ("".equals(txtlastName.getText())){
-           JOptionPane.showMessageDialog(new JFrame(), "Required latName");
+           JOptionPane.showMessageDialog(new JFrame(), "Required lastName");
         }
             if ("".equals(userEmail.getText())){
             JOptionPane.showMessageDialog(new JFrame(), "Required userEmail");
@@ -267,19 +265,26 @@ public class Registration extends javax.swing.JFrame {
                String queryRegister = "INSERT INTO users(firstName, lastName, userEmail, userPassword) " +
                            "VALUES ('"+ firstName +"','"+ lastName +"','"+ useremail +"','"+ passwords +"')";
 
-                try {
+                try{
                     st.execute(queryRegister);
                 } catch (SQLException ex) {
                     System.getLogger(Registration.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
                 }
+                JOptionPane.showMessageDialog(new JFrame(), "Data added successfully");
+                txtfirstName.setText(" ");
+                txtlastName.setText(" ");
+                userEmail.setText(" ");
+                password.setText(" ");
+                new Login().setVisible(true); 
+    this.dispose();
             }
          
             
     }//GEN-LAST:event_RegisterActionPerformed
 
     private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
-         new Login().setVisible(true); // open login form
-    this.dispose(); // close register form
+         new Login().setVisible(true); 
+    this.dispose(); 
     }//GEN-LAST:event_LoginActionPerformed
 
     private void txtfirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfirstNameActionPerformed

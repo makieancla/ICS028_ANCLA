@@ -50,13 +50,13 @@ public class Dashboard extends javax.swing.JFrame {
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("Bundle"); // NOI18N
         jLabel1.setText(bundle.getString("Dashboard.jLabel1.text")); // NOI18N
         jPanel3.add(jLabel1);
-        jLabel1.setBounds(280, -10, 410, 60);
+        jLabel1.setBounds(230, -10, 410, 60);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText(bundle.getString("Dashboard.jLabel2.text")); // NOI18N
         jPanel3.add(jLabel2);
-        jLabel2.setBounds(350, 40, 300, 20);
+        jLabel2.setBounds(290, 40, 300, 20);
 
         jLabel8.setBackground(new java.awt.Color(0, 255, 255));
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/8680622.jpg"))); // NOI18N
