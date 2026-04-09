@@ -265,7 +265,7 @@ public class Registration extends javax.swing.JFrame {
                 passwords = password.getText();
                 
                String queryRegister = "INSERT INTO users(firstName, lastName, userEmail, userPassword) " +
-                           "VALUES ('" + firstName + "', '" + lastName + "', '" + useremail + "', '" + passwords + "')";
+                           "VALUES ('"+ firstName +"','"+ lastName +"','"+ useremail +"','"+ passwords +"')";
 
                 try {
                     st.execute(queryRegister);
