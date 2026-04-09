@@ -111,7 +111,7 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="69" pref="69" max="-2" attributes="0"/>
-                              <Component id="first" min="-2" pref="259" max="-2" attributes="0"/>
+                              <Component id="txtfirstName" min="-2" pref="259" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="69" pref="69" max="-2" attributes="0"/>
@@ -119,7 +119,7 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="69" pref="69" max="-2" attributes="0"/>
-                              <Component id="last" min="-2" pref="259" max="-2" attributes="0"/>
+                              <Component id="txtlastName" min="-2" pref="259" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="69" pref="69" max="-2" attributes="0"/>
@@ -127,15 +127,15 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="69" pref="69" max="-2" attributes="0"/>
-                              <Component id="user" min="-2" pref="259" max="-2" attributes="0"/>
+                              <Component id="userEmail" min="-2" pref="259" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="69" pref="69" max="-2" attributes="0"/>
-                              <Component id="password" min="-2" pref="67" max="-2" attributes="0"/>
+                              <Component id="pas" min="-2" pref="67" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="69" pref="69" max="-2" attributes="0"/>
-                              <Component id="pass" min="-2" pref="259" max="-2" attributes="0"/>
+                              <Component id="password" min="-2" pref="259" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="239" pref="239" max="-2" attributes="0"/>
@@ -143,7 +143,7 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                              <Component id="jLabel7" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="Login" min="-2" pref="61" max="-2" attributes="0"/>
                           </Group>
@@ -165,19 +165,19 @@
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                      <Component id="first" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="txtfirstName" min="-2" pref="28" max="-2" attributes="0"/>
                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                      <Component id="last" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="txtlastName" min="-2" pref="28" max="-2" attributes="0"/>
                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                       <Component id="username" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                      <Component id="user" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="userEmail" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
-                      <Component id="password" min="-2" max="-2" attributes="0"/>
+                      <Component id="pas" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                      <Component id="pass" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="password" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
@@ -215,29 +215,29 @@
             </Component>
             <Component class="javax.swing.JLabel" name="username">
               <Properties>
-                <Property name="text" type="java.lang.String" value="UserName:"/>
+                <Property name="text" type="java.lang.String" value="UserEmail:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="first">
+            <Component class="javax.swing.JTextField" name="txtfirstName">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="firstActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtfirstNameActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="last">
+            <Component class="javax.swing.JTextField" name="txtlastName">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lastActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtlastNameActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="user">
+            <Component class="javax.swing.JTextField" name="userEmail">
             </Component>
-            <Component class="javax.swing.JLabel" name="password">
+            <Component class="javax.swing.JLabel" name="pas">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Password"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="pass">
+            <Component class="javax.swing.JPasswordField" name="password">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passwordActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Register">
@@ -253,7 +253,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Already have an account?"/>
+                <Property name="text" type="java.lang.String" value="Naa nakay account?"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="Login">

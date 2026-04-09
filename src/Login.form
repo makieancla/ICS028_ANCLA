@@ -82,10 +82,6 @@
                               <Component id="username" min="-2" pref="67" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                              <Component id="jLabel25" min="-2" pref="140" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
                               <Component id="jLabel20" min="-2" pref="101" max="-2" attributes="0"/>
                           </Group>
@@ -98,15 +94,18 @@
                                   <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                              <Component id="jLabel25" min="-2" pref="117" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Login2" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace pref="70" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="Login2" min="-2" max="-2" attributes="0"/>
-                          <Component id="LOGIN" min="-2" pref="146" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="LOGIN" min="-2" pref="146" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -180,7 +179,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel25">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Don&apos;t have an account?"/>
+                <Property name="text" type="java.lang.String" value="Wala pakay account?"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="Login2">

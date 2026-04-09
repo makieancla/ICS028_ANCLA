@@ -67,7 +67,7 @@ public class Login extends javax.swing.JFrame {
         LOGIN.setText("Login");
         LOGIN.addActionListener(this::LOGINActionPerformed);
 
-        jLabel25.setText("Don't have an account?");
+        jLabel25.setText("Wala pakay account?");
 
         Login2.setBackground(new java.awt.Color(204, 255, 255));
         Login2.setText("Register");
@@ -86,9 +86,6 @@ public class Login extends javax.swing.JFrame {
                         .addGap(69, 69, 69)
                         .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(147, 147, 147)
                         .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
@@ -97,13 +94,16 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBox1))))
+                            .addComponent(jCheckBox1)))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Login2)))
                 .addContainerGap(70, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Login2)
-                    .addComponent(LOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(124, 124, 124))
         );
         jPanel6Layout.setVerticalGroup(
@@ -179,37 +179,8 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void LOGINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LOGINActionPerformed
-        String username = user.getText();
-    String password = new String(pass.getpassword());
-
-    boolean found = false;
-
-    try {
-        BufferedReader br = new BufferedReader(new FileReader("users.txt"));
-        String line;
-
-        while ((line = br.readLine()) != null) {
-            String[] data = line.split(",");
-
-            if (data[0].equals(email) && data[1].equals(password)) {
-                found = true;
-                break;
-            }
-        }
-
-        br.close();
-
-        if (found) {
-            JOptionPane.showMessageDialog(this, "Login Successful!");
-            new Dashboard().setVisible(true); // open next form
-            this.dispose();
-        } else {
-            JOptionPane.showMessageDialog(this, "Invalid Email or Password!");
-        }
-
-    } catch (IOException e) {
-        JOptionPane.showMessageDialog(this, "Error reading file!");
-    }
+        new Dashboard().setVisible(true); 
+    this.dispose(); 
     }//GEN-LAST:event_LOGINActionPerformed
 
     private void Login2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login2ActionPerformed
