@@ -33,7 +33,17 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        Create = new javax.swing.JTabbedPane();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jTabbedPane4 = new javax.swing.JTabbedPane();
+        jTabbedPane5 = new javax.swing.JTabbedPane();
+        jPanel4 = new javax.swing.JPanel();
         Logout = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        Logout1 = new javax.swing.JButton();
+        Logout2 = new javax.swing.JButton();
+        Logout3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,7 +60,7 @@ public class Dashboard extends javax.swing.JFrame {
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("Bundle"); // NOI18N
         jLabel1.setText(bundle.getString("Dashboard.jLabel1.text")); // NOI18N
         jPanel3.add(jLabel1);
-        jLabel1.setBounds(230, -10, 410, 60);
+        jLabel1.setBounds(250, -10, 410, 60);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -61,29 +71,90 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel8.setBackground(new java.awt.Color(0, 255, 255));
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/8680622.jpg"))); // NOI18N
         jPanel3.add(jLabel8);
-        jLabel8.setBounds(0, 0, 970, 70);
+        jLabel8.setBounds(0, 0, 870, 80);
+
+        Create.setBackground(new java.awt.Color(0, 255, 255));
+        Create.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 255)));
+        Create.addTab(bundle.getString("Dashboard.jTabbedPane2.TabConstraints.tabTitle"), jTabbedPane2); // NOI18N
+        Create.addTab(bundle.getString("Dashboard.jTabbedPane3.TabConstraints.tabTitle"), jTabbedPane3); // NOI18N
+        Create.addTab(bundle.getString("Dashboard.jTabbedPane4.TabConstraints.tabTitle"), jTabbedPane4); // NOI18N
+        Create.addTab(bundle.getString("Dashboard.jTabbedPane5.TabConstraints.tabTitle"), jTabbedPane5); // NOI18N
+
+        jPanel4.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 255)));
 
         Logout.setBackground(new java.awt.Color(0, 255, 255));
         Logout.setText(bundle.getString("Dashboard.Logout.text")); // NOI18N
         Logout.addActionListener(this::LogoutActionPerformed);
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText(bundle.getString("Dashboard.jLabel3.text")); // NOI18N
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        Logout1.setBackground(new java.awt.Color(0, 255, 255));
+        Logout1.setText(bundle.getString("Dashboard.Logout1.text")); // NOI18N
+        Logout1.addActionListener(this::Logout1ActionPerformed);
+
+        Logout2.setBackground(new java.awt.Color(0, 255, 255));
+        Logout2.setText(bundle.getString("Dashboard.Logout2.text")); // NOI18N
+        Logout2.addActionListener(this::Logout2ActionPerformed);
+
+        Logout3.setBackground(new java.awt.Color(0, 255, 255));
+        Logout3.setText(bundle.getString("Dashboard.Logout3.text")); // NOI18N
+        Logout3.addActionListener(this::Logout3ActionPerformed);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Logout3)
+                    .addComponent(Logout2)
+                    .addComponent(Logout1)
+                    .addComponent(Logout)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Logout)
+                .addGap(18, 18, 18)
+                .addComponent(Logout1)
+                .addGap(18, 18, 18)
+                .addComponent(Logout2)
+                .addGap(18, 18, 18)
+                .addComponent(Logout3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(796, Short.MAX_VALUE)
-                .addComponent(Logout)
-                .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Create, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Logout)
-                .addGap(0, 372, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(Create, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -128,6 +199,18 @@ public class Dashboard extends javax.swing.JFrame {
     this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_LogoutActionPerformed
 
+    private void Logout1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Logout1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Logout1ActionPerformed
+
+    private void Logout2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Logout2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Logout2ActionPerformed
+
+    private void Logout3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Logout3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Logout3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -154,12 +237,22 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTabbedPane Create;
     private javax.swing.JButton Logout;
+    private javax.swing.JButton Logout1;
+    private javax.swing.JButton Logout2;
+    private javax.swing.JButton Logout3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTabbedPane jTabbedPane4;
+    private javax.swing.JTabbedPane jTabbedPane5;
     // End of variables declaration//GEN-END:variables
 }
