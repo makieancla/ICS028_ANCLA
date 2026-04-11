@@ -367,8 +367,17 @@ public class Dashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Logout3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Logout3ActionPerformed
-        new Login().setVisible(true); // open login form
-    this.dispose();// TODO add your handling e:
+       int confirm = JOptionPane.showConfirmDialog(
+    this,
+    "Are you sure you want to go to Login?",
+    "Confirmation",
+    JOptionPane.YES_NO_OPTION
+);
+
+if (confirm == JOptionPane.YES_OPTION) {
+    new Login().setVisible(true); 
+    this.dispose();              
+}
     }//GEN-LAST:event_Logout3ActionPerformed
 
     private void firstnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstnameActionPerformed
@@ -404,8 +413,8 @@ public class Dashboard extends javax.swing.JFrame {
 
     JOptionPane.showMessageDialog(this,
         "User Information:\n\n" +
-        "ID: " + id + "n" +
-        "First Name: " + fname + "n" +
+        "ID: " + id + "\n" +
+        "First Name: " + fname + "\n" +
         "Last Name: " + lname + "\n" +
         "Email: " + mail + "\n" +
         "Password: " + pass

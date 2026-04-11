@@ -274,8 +274,8 @@ public class Registration extends javax.swing.JFrame {
                 txtfirstName.setText(" ");
                 txtlastName.setText(" ");
                 userEmail.setText(" ");
-                password.setText(" ");
-                new Login().setVisible(true); 
+                new Login().setVisible(true);                 password.setText(" ");
+
     this.dispose();
             }
          
