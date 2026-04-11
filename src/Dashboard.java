@@ -12,23 +12,22 @@ public class Dashboard extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Dashboard.class.getName());
 
-    /**
-     * Creates new form Dashboard
-     */
+
     public Dashboard() {
         initComponents();
+        jTable1.setDefaultEditor(Object.class, null);
        jTable1.setRowSelectionAllowed(true);
     jTable1.setColumnSelectionAllowed(false);
     jTable1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
     try { 
         Connection();
-        loadTable(); // auto load data
+        loadTable(); 
     } catch (SQLException ex) {
         System.getLogger(Login.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
     }
 
-    // click row = fill textfields
+   
     jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
         public void mouseClicked(java.awt.event.MouseEvent evt) {
             int row = jTable1.getSelectedRow();
@@ -405,8 +404,8 @@ public class Dashboard extends javax.swing.JFrame {
 
     JOptionPane.showMessageDialog(this,
         "User Information:\n\n" +
-        "ID: " + id + "\n" +
-        "First Name: " + fname + "\n" +
+        "ID: " + id + "n" +
+        "First Name: " + fname + "n" +
         "Last Name: " + lname + "\n" +
         "Email: " + mail + "\n" +
         "Password: " + pass
