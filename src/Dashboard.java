@@ -444,6 +444,7 @@ public class Dashboard extends javax.swing.JFrame {
     pst.executeUpdate();
 
     JOptionPane.showMessageDialog(this, "Saved!");
+    loadTable();
 
 } catch (SQLException e) {
     JOptionPane.showMessageDialog(this, e.getMessage());
