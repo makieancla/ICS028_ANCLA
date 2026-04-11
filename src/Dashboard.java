@@ -468,8 +468,9 @@ public class Dashboard extends javax.swing.JFrame {
     pst.executeUpdate();
 
     JOptionPane.showMessageDialog(this, "Updated!");
+    loadTable();
 
-            } catch (Exception e) {
+} catch (Exception e) {
     JOptionPane.showMessageDialog(this, "Select a row first!");
 }
     }//GEN-LAST:event_updatebuttonActionPerformed
