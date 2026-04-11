@@ -389,31 +389,36 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordActionPerformed
 
     private void readbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readbuttonActionPerformed
-        try {
-    String sql = "SELECT * FROM users";
-    pst = con.prepareStatement(sql);
-    ResultSet rs = pst.executeQuery();
+      try {
+    int row = jTable1.getSelectedRow();
 
-    DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-    model.setRowCount(0);
-
-    while (rs.next()) {
-        model.addRow(new Object[]{
-            rs.getInt("userID"),
-            rs.getString("firstName"),
-            rs.getString("lastName"),
-            rs.getString("userEmail"),
-            rs.getString("userPassword")
-        });
+    if (row == -1) {
+        JOptionPane.showMessageDialog(this, "Please select a row first!");
+        return;
     }
 
-} catch (SQLException e) {
+    String id = jTable1.getValueAt(row, 0).toString();
+    String fname = jTable1.getValueAt(row, 1).toString();
+    String lname = jTable1.getValueAt(row, 2).toString();
+    String mail = jTable1.getValueAt(row, 3).toString();
+    String pass = jTable1.getValueAt(row, 4).toString();
+
+    JOptionPane.showMessageDialog(this,
+        "User Information:\n\n" +
+        "ID: " + id + "\n" +
+        "First Name: " + fname + "\n" +
+        "Last Name: " + lname + "\n" +
+        "Email: " + mail + "\n" +
+        "Password: " + pass
+    );
+
+} catch (Exception e) {
     JOptionPane.showMessageDialog(this, e.getMessage());
 }
     }//GEN-LAST:event_readbuttonActionPerformed
 
     private void deletebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletebuttonActionPerformed
-     try {
+    try {
     int row = jTable1.getSelectedRow();
     int id = (int) jTable1.getValueAt(row, 0);
 
@@ -425,8 +430,9 @@ public class Dashboard extends javax.swing.JFrame {
     pst.executeUpdate();
 
     JOptionPane.showMessageDialog(this, "Deleted!");
+    loadTable();
 
-} catch (Exception e) {
+    } catch (Exception e) {
     JOptionPane.showMessageDialog(this, "Select a row first!");
 }
     }//GEN-LAST:event_deletebuttonActionPerformed
